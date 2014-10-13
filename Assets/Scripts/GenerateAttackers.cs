@@ -34,7 +34,7 @@ public class GenerateAttackers : MonoBehaviour
 			//this loop checks to find whether ships are enemies or friendly and instantiates them around the base in a random fashion
 						if (gameObject.tag == "Home Base") {
 							transform.renderer.material.color = hexColor(0, 222, 185, 255);
-							Vector3 position = new Vector3(UnityEngine.Random.Range(-6.0F, 0.0F), UnityEngine.Random.Range(-4.0F, 1.0F), UnityEngine.Random.Range(0.0F, 1.0F));
+							Vector3 position = new Vector3(UnityEngine.Random.Range(-6.0F, 0.0F), UnityEngine.Random.Range(-4.0F, 1.0F), 0);
 							Instantiate(ship, position, Quaternion.identity);
 							//gameObject.tag = "Home Ship";
 							delay = 1f;
@@ -42,7 +42,7 @@ public class GenerateAttackers : MonoBehaviour
 				
 						if (gameObject.tag == "Enemy Base") {
 							transform.renderer.material.color = hexColor(255, 0, 13, 255);
-							Vector3 position = new Vector3(UnityEngine.Random.Range(-6.0F, 0.0F), UnityEngine.Random.Range(-4.0F, 1.0F), UnityEngine.Random.Range(0.0F, 1.0F));
+							Vector3 position = new Vector3(UnityEngine.Random.Range(-6.0F, 0.0F), UnityEngine.Random.Range(-4.0F, 1.0F), 0);
 							Instantiate(ship, position, Quaternion.identity);
 			//	transform.position = new Vector3(transform.position.x - range * Random.value, transform.position.y, transform.position.z);
 
