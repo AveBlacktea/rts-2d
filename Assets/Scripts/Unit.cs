@@ -84,9 +84,11 @@ public class Unit : MonoBehaviour {
 
 
 	private void MakeMove() {
-		transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * 2);
+		transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * 3);
+		//rigidbody2D.AddForce(destination * 3 * Time.deltaTime);
 		Debug.Log ("makemove's transforming");
 		if(transform.position == destination) moving = false;
 	}
-
+	
 }
+
